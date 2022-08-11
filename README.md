@@ -19,30 +19,30 @@ There are 5 steps to connect any java application with the database using JDBC.
 <br><br>
 <img src="https://static.javatpoint.com/java/new/images/java-database-connectivity-steps.jpg">
 <br><br>
-Step 1. Load the driver
+**Step 1. Load the driver**
 <br>
 JDBC Driver is a software component that enables java application to interact with the database. The `forName()` method of Class class is used to register the driver class. This method is used to dynamically load the driver class.
 <br>
 ` Syntax of mysql Driver: Class.forName("com.mysql.cj.jdbc.Driver"); `
 <br><br>
 Note : There are diffrent drivers for diffrent database
-
 <br>
-Step 2. Create Connection
+
+**Step 2. Create Connection**
 <br>
 The `getConnection()` method of DriverManager class is used to establish connection with the database.<br>
 ` Syntax : Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_Name","Username","password"); `
 <br>
 <br>
 
-Step 3. Create the Statement object
+**Step 3. Create the Statement object**
 <br>
 The `createStatement()` method of Connection interface is used to create statement. The object of statement is responsible to execute queries with the database. <br>
 `Syntax : Statement stmt=con.createStatement(); `
 
 <br>
 
-Step 4. Execute the query
+**Step 4. Execute the query**
 <br>
 The `executeQuery()` method of Statement interface is used to execute queries to the database. This method returns the object of ResultSet that can be used to get all the records of a table.
 <br>
@@ -51,7 +51,7 @@ The `executeQuery()` method of Statement interface is used to execute queries to
 <br> `while(rs.next()){  
 System.out.println(rs.getInt(1)+" "+rs.getString(2));} `
 
-Step 5. Close the connection object
+**Step 5. Close the connection object**
 <br>
 By closing connection object statement and ResultSet will be closed automatically. The `close()` method of Connection interface is used to close the connection.
 <br>
